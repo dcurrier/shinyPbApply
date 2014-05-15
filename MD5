@@ -1,8 +1,8 @@
-9a640fe1d72be7044cd970aba99cb4da *DESCRIPTION
+1d09dfd017dae4c9611c2280ff2926cf *DESCRIPTION
 0e4fec8b5e37ccc7d06d4203b3acc231 *NAMESPACE
 178d8a843fd01f8e5968a2040e40ed51 *R/closepb.R
 17383a3779294bdc011c8c0dc3ed5faa *R/pbapply.R
-432a88095da5995e3723c48b34f4a3c8 *R/pblapply.R
+fa57ac2564b83fa266e8959fea6c50e0 *R/pblapply.R
 13fbfb5aabeadfe8e67088d674315061 *R/pboptions.R
 fa2b502ddf661de04f96f24b09dc7400 *R/pbreplicate.R
 4e68bdec72f3921e4d18aa7fddd1fa3a *R/pbsapply.R
@@ -15,6 +15,6 @@ d34f1b434df5b2cc1909c9d2ff514e0d *R/unix/startpb.R
 514f8bb3db324d9ab299f4cfb4b048ce *R/windows/setpb.R
 9cc645e5fc2d13c8998ba19983ec3311 *R/windows/startpb.R
 f39cf62a1ccfcc1f99d379f423b48912 *R/zzz.R
-cf56ddda0546658e782efeec8af5dbaf *inst/ChangeLog
+69230cdec840f61d5701a847fda85197 *inst/ChangeLog
 0b5ad911945c93e72f02f8e95063d323 *man/pbapply.Rd
 a00e72b42552b31aa5d6d5deabe79742 *man/pboptions.Rd
