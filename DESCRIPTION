@@ -6,10 +6,11 @@ Date: 2014-10-02
 Author: Duane Currier
 Maintainer: Duane Currier <duanecurrier@icloud.com>
 Description: A lightweight package that adds
-   a shiny progress bar to vectorized R functions
-  ('*apply'). The implementation can easily be added
-  to functions, where showing the progress is
-  useful for the user (e.g. bootstrap).
+    a shiny progress bar to vectorized R functions
+    ('*apply'). The implementation can easily be added
+    to functions, where showing the progress is
+    useful for the user (e.g. bootstrap).
 License: GPL-2
 LazyLoad: yes
-Imports: shiny
+Imports:
+    shiny
