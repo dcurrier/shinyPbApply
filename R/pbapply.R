@@ -39,7 +39,7 @@
 #'                            server=shinyServer( function(input, output, session){
 #'                                                       observe({
 #'                                                           if(input$go > 0)
-#'                                                              pbapply(matrix(c(1:20000000), ncol=20000), 1, FUN=summary, session=session, message="My Message")
+#'                                                              pbapply(matrix(c(1:20000000), ncol=2000000), 1, FUN=summary, session=session, message="My Message")
 #'                                                       })
 #'                                                 }) )
 #' @export
@@ -77,7 +77,9 @@ pbapply <- function(X, MARGIN, FUN, session=getDefaultReactiveDomain(), message=
     ans <- vector("list", d2)
 
     pb <- shiny::Progress$new(session, min=0, max=1)
-    pb$set(message=message, detail=detail)
+    showDetail = if(!is.null(detail) && detail == "percent") paste0("0%") else detail
+    pb$set(message=message, detail=showDetail)
+    int <- if(d2<1000) c(1:d2)/100 else seq(0.01, 1, by=0.01)*d2
 
     if (length(d.call) < 2L) {
         if (length(dn.call))
@@ -86,8 +88,8 @@ pbapply <- function(X, MARGIN, FUN, session=getDefaultReactiveDomain(), message=
             tmp <- FUN(newX[, i], ...)
             if (!is.null(tmp))
                 ans[[i]] <- tmp
-
-            pb$set(value=i/d2)
+            showDetail = if(!is.null(detail) && detail == "percent") paste0(i/d2*100, "%") else detail
+            pb$set(value=i/d2, detail=showDetail)
 
         }
     }
@@ -95,8 +97,8 @@ pbapply <- function(X, MARGIN, FUN, session=getDefaultReactiveDomain(), message=
         tmp <- FUN(array(newX[, i], d.call, dn.call), ...)
         if (!is.null(tmp))
             ans[[i]] <- tmp
-
-        pb$set(value=i/d2)
+        showDetail = if(!is.null(detail) && detail == "percent") paste0(i/d2*100, "%") else detail
+        pb$set(value=i/d2, detail=showDetail)
 
     }
 

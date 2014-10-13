@@ -57,7 +57,7 @@
 #' @export
 pbsapply <- function (X, FUN, session=getDefaultReactiveDomain(), message=NULL, detail=NULL, ..., simplify = TRUE, USE.NAMES = TRUE) {
     FUN <- match.fun(FUN)
-    answer <- pblapply(X, FUN,session,  message, detail, ...)
+    answer <- pblapply(X, FUN, session,  message, detail, ...)
     if (USE.NAMES && is.character(X) && is.null(names(answer)))
         names(answer) <- X
     if (simplify && length(answer) && length(common.len <- unique(unlist(lapply(answer,

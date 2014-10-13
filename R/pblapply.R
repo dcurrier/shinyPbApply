@@ -52,13 +52,14 @@ pblapply <- function (X, FUN, session=getDefaultReactiveDomain(), message=NULL, 
     if (!(interactive() && !is.null(session) && B >= 1))
         return(lapply(X, FUN, ...))
     pb <- shiny::Progress$new(session, min=0, max=1)
-    pb$set(message=message, detail=detail)
+    showDetail = if(!is.null(detail) && detail == "percent") paste0("0%") else detail
+    pb$set(message=message, detail=showDetail)
     int <- if(B<1000) c(1:B)/100 else seq(0.01, 1, by=0.01)*B
     rval <- vector("list", B)
     for (i in 1:B) {
         rval[[i]] <- FUN(X[[i]], ...)
-        pct =
-        if(i %in% int) pb$set(value=i/B, detail)
+        showDetail = if(!is.null(detail) && detail == "percent") paste0(i/B*100, "%") else detail
+        if(i %in% int) pb$set(value=i/B, detail=showDetail)
     }
     pb$close()
     return(rval)
