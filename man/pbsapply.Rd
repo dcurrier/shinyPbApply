@@ -32,7 +32,7 @@ shown with a de-emphasized appearance relative to \code{message}.}
 be simplified to a vector, matrix or higher dimensional array if
 possible? The default value, \code{TRUE}, returns a vector or
 matrix if appropriate, whereas if \code{simplify = "array"} the
-result may be an array of “rank” \code{(=length(dim(.))}) one
+result may be an array of “rank” \code{=length(dim(.)} one
 higher than the result of \code{FUN(X[[i]])}.}
 
 \item{USE.NAMES}{logical; use names if the first \code{...} argument
@@ -61,6 +61,6 @@ shiny::shinyApp( ui=fluidPage(titlePanel("Progress Bars!!"),
                                                 }) )
 }
 \seealso{
-\code{\link{}} and \code{\link{}}
+\code{\link{pbapply}} and \code{\link{pblapply}}
 }
 

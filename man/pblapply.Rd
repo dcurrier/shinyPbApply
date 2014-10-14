@@ -50,6 +50,6 @@ shiny::shinyApp( ui=fluidPage(titlePanel("Progress Bars!!"),
                                                 }) )
 }
 \seealso{
-\code{\link{}} and \code{\link{}}
+\code{\link{pbapply}} and \code{\link{pbsapply}}
 }
 

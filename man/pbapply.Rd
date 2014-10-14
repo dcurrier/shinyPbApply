@@ -44,11 +44,11 @@ shiny::shinyApp( ui=fluidPage(titlePanel("Progress Bars!!"), actionButton('go', 
                            server=shinyServer( function(input, output, session){
                                                       observe({
                                                           if(input$go > 0)
-                                                             pbapply(matrix(c(1:20000000), ncol=20000), 1, FUN=summary, session=session, message="My Message")
+                                                             pbapply(matrix(c(1:20000000), ncol=2000000), 1, FUN=summary, session=session, message="My Message")
                                                       })
                                                 }) )
 }
 \seealso{
-\code{\link{}} and \code{\link{}}
+\code{\link{pblapply}} and \code{\link{pbsapply}}
 }
 
