@@ -28,7 +28,7 @@
 #'
 #' @return A list of results from \code{FUN} applied over \code{X}.
 #'
-#' @seealso \code{\link{}} and \code{\link{}}
+#' @seealso \code{\link{pbapply}} and \code{\link{pbsapply}}
 #'
 #' @rdname pblapply
 #'

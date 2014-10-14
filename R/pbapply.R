@@ -31,7 +31,7 @@
 #'
 #' @return A vector of results from \code{FUN} applied over \code{X}.
 #'
-#' @seealso \code{\link{}} and \code{\link{}}
+#' @seealso \code{\link{pblapply}} and \code{\link{pbsapply}}
 #'
 #' @rdname pbapply
 #'
