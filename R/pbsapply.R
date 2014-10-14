@@ -30,7 +30,7 @@
 #' be simplified to a vector, matrix or higher dimensional array if
 #' possible? The default value, \code{TRUE}, returns a vector or
 #' matrix if appropriate, whereas if \code{simplify = "array"} the
-#' result may be an array of “rank” \code{(=length(dim(.))}) one
+#' result may be an array of “rank” \code{=length(dim(.)}) one
 #' higher than the result of \code{FUN(X[[i]])}.
 #'
 #' @param USE.NAMES logical; use names if the first \code{...} argument
